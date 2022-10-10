@@ -1,11 +1,4 @@
-@font-face {
-  font-family: regular;
-  src: url("/Source/Fonts/Manrope-SemiBold.ttf");
-}
-@font-face {
-  font-family: extraBold;
-  src: url("/Source/Fonts/Manrope-ExtraBold.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@500;600;700;800&family=Poppins&display=swap");
 @font-face {
   font-family: COE;
   src: url("../Fonts/Movement.ttf");
@@ -38,7 +31,8 @@ html {
   text-rendering: optimizeSpeed;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
-  font-family: regular;
+  font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html:focus-within {
@@ -69,12 +63,7 @@ select {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -91,7 +80,6 @@ input[type=number] {
 }
 body {
   background: #010101;
-  overflow-x: hidden;
 }
 
 #span-section div {
@@ -110,17 +98,27 @@ body {
   color: rgb(230, 230, 230);
   position: absolute;
   font-family: COE;
-  padding: 2.4rem;
+  padding: 1.85rem;
   font-size: 1.75rem;
   position: fixed;
+  width: 100%;
+  background: rgba(24, 24, 24, 0.434);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  z-index: 20;
 }
 #span-section ul {
+  z-index: 100;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  font-family: regular;
-  padding: 1.15rem 10rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  background: rgba(24, 24, 24, 0.434);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  padding: 1.15rem 11rem;
   position: fixed;
   width: 100%;
   list-style: none;
@@ -139,38 +137,217 @@ body {
   transform: translateY(2.5px);
 }
 
+#info-section {
+  background-color: white;
+  color: #000000;
+  padding: clamp(5rem, 7vw, 7.5rem) clamp(10rem, 20vw, 15rem);
+}
+#info-section h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+#info-section p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  line-height: 1.6rem;
+  color: hsla(240deg, 3%, 12%, 0.758);
+  margin-left: 0.3rem;
+  padding-right: 2rem;
+}
+#info-section button {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 2rem 0 2rem 0rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border-color: rgba(0, 0, 0, 0.068);
+  background-color: transparent;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#info-section button a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+#info-section button:hover {
+  transform: translateY(1px);
+  border-color: rgba(1, 1, 1, 0.6862745098);
+  box-shadow: rgba(43, 43, 43, 0.409) 4px 4px;
+}
+#info-section button:hover img {
+  transform: translateY(30px);
+}
+#info-section button img {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: none;
+  display: inline;
+  margin: 0 !important;
+}
+#info-section .departments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+#info-section .departments .AIML {
+  background: #ee9ca7;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+}
+#info-section .departments .PERE {
+  background: #1c92d2;
+  background: linear-gradient(to right, #bcf3ff, #1c92d2);
+}
+#info-section img {
+  margin-right: 2rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#info-section img:nth-of-type(1) {
+  margin: 1.5rem 0;
+}
+
+#photo-section {
+  background-color: #ffffff;
+  margin-bottom: 4.5rem;
+}
+#photo-section .container {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+}
+#photo-section .main .container {
+  border: none;
+}
+#photo-section .main .container .swiper-container {
+  border: 8px solid #f8f8f8;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  box-shadow: rgba(99, 138, 172, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+#photo-section .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image {
+  background: #ffffff;
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+}
+#photo-section .main .container .swiper-container .swiper-wrapper .swiper-slide .card-image img {
+  display: block;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 0;
+}
+#photo-section .main .container .swiper-container .swiper-pagination-bullet {
+  opacity: 0.8;
+  background: #252a32;
+}
+#photo-section .main .container .swiper-container .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+#photo-section .main .container .swiper-container .swiper-button-next,
+#photo-section .main .container .swiper-container .swiper-button-prev {
+  background-image: none;
+  background-size: 0;
+  background-repeat: no-repeat;
+  background-position: 0;
+  margin-top: -1rem;
+}
+#photo-section .main .container .swiper-container .swiper-button-next svg,
+#photo-section .main .container .swiper-container .swiper-button-prev svg {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#photo-section .main .container .swiper-container .swiper-button-next svg:hover,
+#photo-section .main .container .swiper-container .swiper-button-prev svg:hover {
+  fill: #fff6ea;
+  transform: scale(1.1);
+}
+
+#director-section {
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  background-color: #ecfaec;
+  padding: 10rem 7rem;
+}
+#director-section section {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#director-section section div {
+  padding: 2rem 3rem;
+}
+#director-section section div h1 {
+  font-family: "Allura", cursive;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: #166639;
+}
+#director-section section div p {
+  font-family: "Poppins", "Manrope";
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  font-weight: 600;
+  line-height: 1.6rem;
+  height: 19rem;
+  overflow-y: scroll;
+  color: rgba(0, 0, 0, 0.6588235294);
+}
+#director-section section img {
+  width: 48%;
+}
+
+#video-section {
+  overflow-x: hidden;
+}
 #video-section video {
   width: 110%;
 }
 #video-section h1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
   padding: 0 0.5rem;
-  font-family: extraBold;
   color: white;
   text-align: center;
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   transform: translateY(6rem);
-  line-height: clamp(3rem, 6vw, 5.5rem);
+  line-height: clamp(3rem, 6vw, 5rem);
 }
 
-/* -- Footer styles -- */
 #footer {
-  border-top: 0.25rem solid rgba(255, 255, 255, 0.25);
   width: 100%;
+  overflow: hidden;
 }
 #footer h3,
 #footer a {
-  font-family: regular;
+  font-family: "Manrope", sans-serif;
   margin: 0px;
 }
 #footer .footer-section-title {
   color: white;
   font-size: 1.45rem;
+  font-weight: 700;
 }
 #footer .footer-section-links > a {
-  color: white;
+  color: rgba(255, 255, 255, 0.413);
+  font-weight: 600;
 }
 #footer .footer-section-links > a:hover {
   text-decoration: underline;
+  color: rgba(255, 255, 255, 0.947);
 }
 #footer #footer-content {
   gap: 2rem;
@@ -189,6 +366,7 @@ body {
   bottom: 0px;
   overflow: hidden;
   pointer-events: none;
+  z-index: 0;
 }
 
 .bubble {
@@ -203,7 +381,6 @@ body {
           animation: wave 2s ease-in-out infinite;
 }
 
-/* -- YouTube Link Styles -- */
 .slide-in-bottom {
   -webkit-animation: slide-in-bottom 1s ease-in-out both;
   animation: slide-in-bottom 1s ease-in-out both;
@@ -252,7 +429,13 @@ body {
     display: none;
   }
 }
+/* -- Mobile styles -- */
 @media (max-width: 47rem) {
+  #span-section #brandLogo {
+    padding: 1.15rem 0 1.15rem 2rem;
+    display: block;
+    width: 100%;
+  }
   #span-section ul {
     display: flex;
     flex-direction: column;
@@ -271,7 +454,7 @@ body {
     transition: transform 700ms ease-in-out;
   }
   #span-section ul .COE {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   #span-section ul li {
     margin: 0 0 1.5rem 1rem;
@@ -284,7 +467,7 @@ body {
     position: fixed;
     aspect-ratio: 1;
     width: 2rem;
-    top: 2.5rem;
+    top: 1.2rem;
     right: 2rem;
     z-index: 9999;
     background-image: url("../SVG/Menu.svg");
@@ -295,15 +478,70 @@ body {
   #span-section .mobile-nav-toggle:hover {
     cursor: pointer;
   }
-  #span-section #brandLogo {
-    display: block;
+  #director-section {
+    padding: 7rem 2rem;
+  }
+  #director-section section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: white;
+  }
+  #director-section section div {
+    padding: 2rem, 2rem;
+  }
+  #director-section section div h1 {
+    font-size: 2.725rem;
+  }
+  #director-section section div p {
+    height: 26rem;
+  }
+  #director-section section img {
+    width: 75%;
+    margin-bottom: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #info-section {
+    padding: 5.5rem 3.5rem;
+  }
+  #info-section button:hover {
+    transform: none;
+    border-color: rgba(0, 0, 0, 0.686);
+    box-shadow: none;
+  }
+  #info-section button:hover img {
+    transform: none;
+  }
+  #info-section p {
+    padding-right: 0;
+  }
+  #info-section .departments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #info-section .departments img:nth-of-type(1) {
+    margin: 2rem;
+    margin-top: 1rem;
+  }
+  #info-section .departments .AIML,
+#info-section .departments .PERE {
+    width: 230px;
+    height: 230px;
   }
   #video-section h1 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    line-height: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 3.725rem);
+    line-height: clamp(2.5rem, 4vw, 3.725rem);
+    letter-spacing: 0.045rem;
   }
   #video-section video {
     width: 450%;
+  }
+  #bubble-wrapper {
+    display: none;
   }
   #footer-content {
     display: flex;
@@ -324,6 +562,12 @@ body {
     justify-content: center;
     align-items: flex-end;
   }
+  @-moz-document url-prefix() {
+    #director-section section div p {
+      font-family: "Manrope";
+      font-weight: 500;
+    }
+  }
 }
 @media (min-width: 47rem) and (max-width: 80rem) {
   #video-section h1 {
@@ -331,6 +575,42 @@ body {
   }
   #video-section video {
     width: 200%;
+  }
+  #director-section {
+    padding: 7rem 2rem;
+  }
+  #director-section section {
+    background: white;
+  }
+  #director-section section div {
+    padding: 2rem, 2rem;
+  }
+  #director-section section img {
+    width: 65%;
+  }
+  #info-section {
+    padding: 7rem 5rem;
+  }
+  #info-section .departments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #info-section .departments button:hover {
+    transform: none;
+    border-color: rgba(0, 0, 0, 0.686);
+    box-shadow: none;
+  }
+  #info-section .departments button:hover img {
+    transform: none;
+  }
+  #info-section .departments img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #bubble-wrapper {
+    display: none;
   }
   #footer-content {
     display: flex;
@@ -351,6 +631,9 @@ body {
     justify-content: center;
     align-items: center;
   }
+  #span-section #brandLogo {
+    padding: 1.375rem 0 1.375rem 3rem;
+  }
   #span-section ul {
     display: flex;
     flex-direction: column;
@@ -369,10 +652,12 @@ body {
     transition: transform 700ms ease-in-out;
   }
   #span-section ul .COE {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2.75rem;
   }
   #span-section ul li {
-    margin: 0 0 1.5rem 1rem;
+    font-size: 1.15rem;
+    margin: 0 0 1.5rem 1.5rem;
   }
   #span-section ul[data-visible=true] {
     transform: translateX(0%);
@@ -382,8 +667,8 @@ body {
     position: fixed;
     aspect-ratio: 1;
     width: 2rem;
-    top: 2.5rem;
-    right: 2rem;
+    top: 1.3rem;
+    right: 3rem;
     z-index: 9999;
     background-image: url("../SVG/Menu.svg");
     background-repeat: no-repeat;
@@ -395,6 +680,15 @@ body {
   }
   #span-section #brandLogo {
     display: block;
+  }
+  @-moz-document url-prefix() {
+    #director-section section img {
+      width: 480px;
+    }
+    #director-section section div p {
+      font-family: "Manrope";
+      font-weight: 500;
+    }
   }
 }
 @media (min-width: 80rem) {
@@ -416,5 +710,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .AIML,
+.PERE {
+    align-self: flex-start;
+  }
+  @-moz-document url-prefix() {
+    #director-section section img {
+      width: 650px;
+    }
+    #director-section section div p {
+      font-weight: 500;
+      font-family: "Manrope";
+    }
   }
 }/*# sourceMappingURL=style.css.map */

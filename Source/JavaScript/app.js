@@ -4,6 +4,14 @@ const primaryNavbar = document.querySelector(`.primary-navigation`)
 const navToggler = document.querySelector(`.mobile-nav-toggle`)
 let index = 0;
 
+
+
+// document.querySelector(`#info-section`).addEventListener(`scroll`,()=>{
+//   document.querySelector(`#brandLogo`).style.color = `green`;
+//   console.log(`scroll on info`);
+// })
+
+
 navToggler.addEventListener(`click`,()=>{
     const visiblity = primaryNavbar.getAttribute(`data-visible`) 
     if(visiblity === `false`){
@@ -15,10 +23,40 @@ navToggler.addEventListener(`click`,()=>{
     }
 })
 
+
 // window.addEventListener(`scroll`,()=>{
 //   console.log(`scrolled`);
 // })
 
+
+var swiper = new Swiper(".swiper-container", {
+  slidesPerView: 1.3,
+  spaceBetween: 15,
+  centeredSlides: true,
+  freeMode: true,
+  grabCursor: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    500: {
+      slidesPerView: 1
+    },
+    900: {
+      slidesPerView: 1
+    }
+  }
+});
 
 
 
