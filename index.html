@@ -15,14 +15,117 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css'>
   <link rel="stylesheet" href="/Source/Style/style.css">
   <link rel="shortcut icon" href="./Source/Images/favicon.ico">
+  <style>
+    body {
+      background-color: #010101;
+      overflow: hidden;
+    }
+
+    #loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -2.7em;
+      margin-left: -2.7em;
+      width: 5.4em;
+      height: 5.4em;
+      background-color: #010101;
+    }
+
+    #hill {
+      position: absolute;
+      width: 7.1em;
+      height: 7.1em;
+      top: 1.7em;
+      left: 1.7em;
+      background-color: transparent;
+      border-left: .25em solid whitesmoke;
+      transform: rotate(45deg);
+    }
+
+    #hill:after {
+      content: '';
+      position: absolute;
+      width: 7.1em;
+      height: 7.1em;
+      left: 0;
+      background-color: #010101;
+    }
+
+    #box {
+      position: absolute;
+      left: 0;
+      bottom: -.1em;
+      width: 1em;
+      height: 1em;
+      background-color: transparent;
+      border: .25em solid whitesmoke;
+      border-radius: 15%;
+      transform: translate(0, -1em) rotate(-45deg);
+      animation: push 2.5s cubic-bezier(.79, 0, .47, .97) infinite;
+    }
+
+    @keyframes push {
+      0% {
+        transform: translate(0, -1em) rotate(-45deg);
+      }
+
+      5% {
+        transform: translate(0, -1em) rotate(-50deg);
+      }
+
+      20% {
+        transform: translate(1em, -2em) rotate(47deg);
+      }
+
+      25% {
+        transform: translate(1em, -2em) rotate(45deg);
+      }
+
+      30% {
+        transform: translate(1em, -2em) rotate(40deg);
+      }
+
+      45% {
+        transform: translate(2em, -3em) rotate(137deg);
+      }
+
+      50% {
+        transform: translate(2em, -3em) rotate(135deg);
+      }
+
+      55% {
+        transform: translate(2em, -3em) rotate(130deg);
+      }
+
+      70% {
+        transform: translate(3em, -4em) rotate(217deg);
+      }
+
+      75% {
+        transform: translate(3em, -4em) rotate(220deg);
+      }
+
+      100% {
+        transform: translate(0, -1em) rotate(-225deg);
+      }
+    }
+
+  </style>
 </head>
 
 <body>
+  <div id="loader">
+    <div id="box"></div>
+    <div id="hill"></div>
+  </div>
 
   <!-- NAV + CHEST!        NAV + CHEST!     NAV + CHEST!     NAV + CHEST!     NAV + CHEST! -->
 
   <section id="span-section">
-    <a href="#span-section"><h1 id="brandLogo">COE</h1></a>
+    <a href="#span-section">
+      <h1 id="brandLogo">COE</h1>
+    </a>
     <button aria-expanded="false" aria-controls="primary-navigation" class="mobile-nav-toggle"></button>
     <nav>
       <ul data-visible="false" class="primary-navigation">
@@ -34,7 +137,7 @@
           <li>PE / RE</li>
         </a>
         <a href="#info-section">
-          <li>Cources Offered</li>
+          <li>Courses Offered</li>
         </a>
         <a href="#info-section">
           <li>Departments</li>
@@ -53,10 +156,104 @@
         </a> -->
       </ul>
     </nav>
-    <div><img src="./Source/Images/Untitled.webp" width="auto" height="auto" alt="uitrgpvshivpuri"></div>
+    <div>
+      <h1>CENTRE<br>
+        OF EXCELLENCE<br>
+        <span class="college">UIT RGPV SHIVPURI</span>
+      </h1>
+    </div>
+    <section>
+
+      <a href="https://twitter.com/uitrgpvshivpuri" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+          y="0px" width="27" height="27" viewBox="0 0 172 172" style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M160.53333,39.77213c-5.4868,2.43667 -11.38067,4.0764 -17.56693,4.816c6.31813,-3.784 11.1628,-9.77533 13.44467,-16.91907c-5.90533,3.50307 -12.4528,6.04867 -19.42453,7.42467c-5.57853,-5.94547 -13.52493,-9.66067 -22.31987,-9.66067c-16.8904,0 -30.5816,13.69693 -30.5816,30.5816c0,2.39653 0.2752,4.73573 0.7912,6.966c-25.41587,-1.2728 -47.94787,-13.4504 -63.038,-31.9576c-2.62587,4.51787 -4.13373,9.7696 -4.13373,15.38253c0,10.60667 5.39507,19.9692 13.59947,25.45027c-5.01093,-0.16053 -9.72947,-1.53653 -13.85173,-3.82413c0,0.13187 0,0.25227 0,0.38413c0,14.82067 10.53787,27.18173 24.53293,29.98533c-2.5628,0.69947 -5.26893,1.07213 -8.06107,1.07213c-1.96653,0 -3.8872,-0.19493 -5.75053,-0.54467c3.89293,12.14893 15.1876,20.99547 28.5692,21.242c-10.46333,8.2044 -23.65,13.09493 -37.98333,13.09493c-2.46533,0 -4.902,-0.14333 -7.29853,-0.43c13.5364,8.67453 29.60693,13.73707 46.88147,13.73707c56.25547,0 87.00907,-46.60053 87.00907,-87.0148c0,-1.3244 -0.02867,-2.64307 -0.086,-3.956c5.97987,-4.3172 11.16853,-9.7008 15.26787,-15.82973z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </a><a href="https://Instagram.com/uitrgpvshivpuri" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="27" height="27" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M57.32214,17.2c-22.12493,0 -40.12214,18.01386 -40.12214,40.14453v57.33333c0,22.12493 18.01386,40.12214 40.14453,40.12214h57.33333c22.12493,0 40.12214,-18.01386 40.12214,-40.14453v-57.33333c0,-22.12493 -18.01386,-40.12214 -40.14453,-40.12214zM126.13333,40.13333c3.1648,0 5.73333,2.56853 5.73333,5.73333c0,3.1648 -2.56853,5.73333 -5.73333,5.73333c-3.1648,0 -5.73333,-2.56853 -5.73333,-5.73333c0,-3.1648 2.56853,-5.73333 5.73333,-5.73333zM86,51.6c18.9716,0 34.4,15.4284 34.4,34.4c0,18.9716 -15.4284,34.4 -34.4,34.4c-18.9716,0 -34.4,-15.4284 -34.4,-34.4c0,-18.9716 15.4284,-34.4 34.4,-34.4zM86,63.06667c-12.66573,0 -22.93333,10.2676 -22.93333,22.93333c0,12.66573 10.2676,22.93333 22.93333,22.93333c12.66573,0 22.93333,-10.2676 22.93333,-22.93333c0,-12.66573 -10.2676,-22.93333 -22.93333,-22.93333z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </a><a href="https://in.linkedin.com/in/uitrgpvshivpuri" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="29" height="29" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M86,17.2c-37.9948,0 -68.8,30.8052 -68.8,68.8c0,37.9948 30.8052,68.8 68.8,68.8c37.9948,0 68.8,-30.8052 68.8,-68.8c0,-37.9948 -30.8052,-68.8 -68.8,-68.8zM60.17707,48.1772c4.82747,0 8.04387,3.2164 8.04387,7.50493c0,4.28853 -3.2164,7.50493 -8.57707,7.50493c-4.82747,0.00573 -8.04387,-3.2164 -8.04387,-7.50493c0,-4.28853 3.2164,-7.50493 8.57707,-7.50493zM68.8,114.66667h-17.2v-45.86667h17.2zM126.13333,114.66667h-16.19093v-25.06613c0,-6.9316 -4.3172,-8.5312 -5.934,-8.5312c-1.6168,0 -7.0176,1.0664 -7.0176,8.5312c0,1.0664 0,25.06613 0,25.06613h-16.72413v-45.86667h16.72987v6.3984c2.15573,-3.7324 6.47293,-6.3984 14.5684,-6.3984c8.09547,0 14.5684,6.3984 14.5684,20.80053z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </a><a href="https://www.youtube.com/c/UITRGPVShivpuri/featured" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="29" height="29" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M154.45063,49.88c-1.37063,-7.56531 -7.90125,-13.07469 -15.48,-14.79469c-11.34125,-2.40531 -32.33063,-4.12531 -55.04,-4.12531c-22.69594,0 -44.02125,1.72 -55.37594,4.12531c-7.56531,1.72 -14.10937,6.88 -15.48,14.79469c-1.38406,8.6 -2.75469,20.64 -2.75469,36.12c0,15.48 1.37063,27.52 3.09063,36.12c1.38406,7.56531 7.91469,13.07469 15.48,14.79469c12.04,2.40531 32.68,4.12531 55.38937,4.12531c22.70938,0 43.34938,-1.72 55.38938,-4.12531c7.56531,-1.72 14.09594,-6.88 15.48,-14.79469c1.37062,-8.6 3.09062,-20.98937 3.44,-36.12c-0.69875,-15.48 -2.41875,-27.52 -4.13875,-36.12zM65.36,110.08v-48.16l41.96531,24.08z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </a>
+      </a><a href="https://www.facebook.com/uitrgpvshivpuri/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="27" height="27" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M86,17.2c-37.9948,0 -68.8,30.8052 -68.8,68.8c0,34.49173 25.41013,62.97493 58.5144,67.95147v-49.71947h-17.02227v-18.08293h17.02227v-12.03427c0,-19.92333 9.70653,-28.66667 26.2644,-28.66667c7.9292,0 12.126,0.59053 14.10973,0.85427v15.78387h-11.29467c-7.02907,0 -9.48293,6.66787 -9.48293,14.17853v9.88427h20.59987l-2.79213,18.08293h-17.80773v49.8628c33.58013,-4.55227 59.48907,-33.2648 59.48907,-68.0948c0,-37.9948 -30.8052,-68.8 -68.8,-68.8z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </section>
+    <!-- <main></main> -->
 
   </section>
 
+  <!-- College!        College!     College!     College!     College! -->
+
+  <section id="college-section">
+
+    <div>
+
+      <img src="./Source/Images/CollegeLogo.webp" loading="lazy" alt="CollegeLogo">
+      <section>
+        <h1>UIT RGPV SHIVPURI</h1>
+        <p>As per the directives of Government of Madhya Pradesh, University Institute of Technology, Shivpuri, was
+          established in 2020.</p>
+      </section>
+    </div>
+  </section>
 
 
   <!-- INFO-WHITE!        INFO-WHITE!     INFO-WHITE!     INFO-WHITE!     INFO-WHITE! -->
@@ -73,8 +270,8 @@
       manufacturing. Depending upon the organization and area of interest.Center of Excellence (CoE) is a body that
       provides leadership, best practices, research, support, training of trainers and skill training for a specific
       sector/s. The literal meaning of a COE is – 'A place where the highest standards are maintained.</p><br>
-    <h1>Cources offered.</h1>
-    <p>In this Centre Of Excellence, Cources are offered in Artificial Engineering / Machine Learning (AI/ML) and Power
+    <h1>Courses offered.</h1>
+    <p>In this Centre Of Excellence, Courses are offered in Artificial Engineering / Machine Learning (AI/ML) and Power
       Engineering / Renewable Energy (PERE). More information ahead,</p>
 
 
@@ -87,7 +284,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="card-image">
-                  <img  width="998.25" width="560" src="./Source/Images/CollegePhoto.webp" alt="CollegePhoto">
+                  <img width="998.25" width="560" src="./Source/Images/CollegePhoto.webp" alt="CollegePhoto">
                 </div>
               </div>
               <div class="swiper-slide">
@@ -134,7 +331,7 @@
 
     <div class="departments">
       <div>
-        <h1 >AI and ML</h1>
+        <h1>AI and ML</h1>
         <p>Artificial intelligence generally refers to processes and algorithms that are able to simulate human
           intelligence, including mimicking cognitive functions such as perception, learning and problem solving.
           Machine learning and deep learning (DL) are subsets of AI. <br>
@@ -145,11 +342,12 @@
         <button><a href="./Source/Downloadables/PERE COURSES.pdf" download>Brochure<img alt="download" loading="lazy"
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABmJLR0QA/wD/AP+gvaeTAAAAf0lEQVRIie3VsQ3CMBCF4U9MkZYN0qSLqCioqFkiEyIxRQZghkhBdFDk3KRDsivul6wnPxf/VWeSpDJH3CObc8Mn8icO9WdJWcpSlrIdE57od30f/VRTNqPDA0N0Q9y7eK/KBS/bEi7njWttUeGEJUQrzq1EhdH2n42tRcmf8QWpkROZelDtwwAAAABJRU5ErkJggg=="></a></button>
       </div>
-      <img class="AIML" id="PERE"  loading="lazy" src="./Source/Images/AIML.webp" height="250px" width="250px" alt="AIML">
+      <img class="AIML" id="PERE" loading="lazy" src="./Source/Images/AIML.webp" height="250px" width="250px"
+        alt="AIML">
     </div>
     <div class="departments">
       <div>
-        <h1 >PE and RE</h1>
+        <h1>PE and RE</h1>
         <p>Power engineering, also called power systems engineering, is a subfield of electrical engineering that deals
           with the generation, transmission, distribution, and utilization of electric power, and the electrical
           apparatus connected to such systems.<br>
@@ -160,7 +358,7 @@
         <button><a href="./Source/Downloadables/PERE COURSES.pdf" download>Brochure<img alt="download" loading="lazy"
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABmJLR0QA/wD/AP+gvaeTAAAAf0lEQVRIie3VsQ3CMBCF4U9MkZYN0qSLqCioqFkiEyIxRQZghkhBdFDk3KRDsivul6wnPxf/VWeSpDJH3CObc8Mn8icO9WdJWcpSlrIdE57od30f/VRTNqPDA0N0Q9y7eK/KBS/bEi7njWttUeGEJUQrzq1EhdH2n42tRcmf8QWpkROZelDtwwAAAABJRU5ErkJggg=="></a></button>
       </div>
-      <img class="PERE"  src="./Source/Images/PERE.webp" height="250px" width="250px" alt="AIML">
+      <img class="PERE" src="./Source/Images/PERE.webp" height="250px" width="250px" alt="AIML">
 
   </section>
 
@@ -264,6 +462,27 @@
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
   <script>
+    function noScroll() {
+      window.scrollTo(0, 0);
+    }
+    document.onreadystatechange = function () {
+      if (document.readyState !== "complete") {
+        document.querySelector(
+          "body").style.visibility = "hidden";
+        document.querySelector(
+          "#loader").style.visibility = "visible";
+        window.addEventListener('scroll', noScroll);
+
+      } else {
+        document.querySelector(
+          "#loader").style.display = "none";
+        document.querySelector(
+          "body").style.visibility = "visible";
+        window.removeEventListener('scroll', noScroll);
+        document.querySelector(
+          "html").style.scrollBehavior = "smooth";
+      }
+    };
     window.addEventListener(`load`, () => {
       document.body.style.background = '#010101';
       const script = document.createElement(`script`);

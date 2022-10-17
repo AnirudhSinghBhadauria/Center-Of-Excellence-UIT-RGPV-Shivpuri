@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Manrope:wght@500;600;700;800&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap");
 @font-face {
   font-family: COE;
   src: url("../Fonts/Movement.ttf");
+}
+@font-face {
+  font-family: ENV;
+  src: url("../Fonts/Environment.otf");
 }
 $color-white: #ffffff;
 $color-black: #252a32;
@@ -35,11 +40,11 @@ html {
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   font-family: "Manrope", sans-serif;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
-html:focus-within {
-  scroll-behavior: smooth;
-}
+// html:focus-within {
+//   scroll-behavior: smooth;
+// }
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
@@ -87,9 +92,46 @@ body {
 }
 
 #span-section {
-  div {
+  // main {
+  //   width:0.5px;
+  //   height: 8rem;
+  //   border: 1px solid white;
+  //   position: absolute;
+  //   bottom: -4rem;
+  //   right: 50%;
+  //   background-color: white;
+  //   border-radius: 50%;
+  // }
+  section {
     @include flex(row, center, center);
-    min-height: 112vh;
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    // // right: 2rem;
+    // right: 46%;
+
+    svg {
+      margin-right: 0.75rem;
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      &:hover {
+        transform: translateY(-0.2rem);
+        cursor: pointer;
+      }
+    }
+  }
+  div {
+    font-family: ENV;
+    @include flex(column, center, center);
+    place-items: center;
+    min-height: 100vh;
+    color: white;
+    font-size: 4rem;
+    line-height: 6.55rem;
+    overflow-x: hidden;
+
+    .college {
+      color: rgb(51 51 51);
+    }
   }
   .mobile-nav-toggle {
     display: none;
@@ -132,6 +174,42 @@ body {
       font-family: COE;
       font-size: 1.76rem;
       transform: translateY(2.5px);
+    }
+  }
+}
+
+#college-section {
+  margin-block: 8rem;
+  padding: 4rem;
+  // border: 1px solid white;
+
+  div {
+
+    @include flex(row, space-between, center);
+    margin: 0 auto;
+    width: fit-content;
+    border: 5px solid whitesmoke;
+    width: 80%;
+    // background: url(https://www.transparenttextures.com/patterns/cartographer.png) center/cover;
+  
+
+
+    section {
+      width: 100%;
+      padding: 1rem;
+      color: white;
+      h1 {
+        text-align: center;
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        margin-bottom: 1rem;
+        font-family: ENV;
+      }
+      p {
+        text-align: center;
+        color: rgb(99, 99, 99);
+        font-family: ENV;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+      }
     }
   }
 }
@@ -445,6 +523,20 @@ body {
 
 @media (max-width: 47rem) {
   #span-section {
+    section {
+      svg {
+        margin-right: 1rem;
+      }
+    }
+    div {
+      padding: 0.6rem 0.6rem;
+      font-size: 2rem;
+      line-height: 3.5rem;
+
+      .college {
+        color: rgb(51 51 51);
+      }
+    }
     #brandLogo {
       padding: 1.15rem 0 1.15rem 2rem;
       display: block;
@@ -478,7 +570,7 @@ body {
       position: fixed;
       aspect-ratio: 1;
       width: 2rem;
-      top: 1.2rem;
+      top: 1rem;
       right: 2rem;
       z-index: 9999;
       background-image: url("../SVG/Menu.svg");
@@ -487,6 +579,16 @@ body {
       border: none;
       &:hover {
         cursor: pointer;
+      }
+    }
+  }
+  #college-section {
+    padding: 0;
+    div {
+      flex-direction: column;
+      img{width: 100%;}
+      section{
+        margin-block: 2rem;
       }
     }
   }
@@ -535,8 +637,8 @@ body {
       }
       .AIML,
       .PERE {
-        width: 230px;
-        height: 230px;
+        width: 210px;
+        height: 210px;
       }
     }
   }
@@ -587,7 +689,16 @@ body {
       width: 200%;
     }
   }
-
+  #college-section {
+    div {
+      // padding: 5rem;
+      flex-direction: column;
+      img{width: 100%;}
+      section{
+        margin-block: 2rem;
+      }
+    }
+  }
   #director-section {
     padding: 7rem 2rem;
     section {
@@ -638,6 +749,20 @@ body {
     @include flex(column, center, center);
   }
   #span-section {
+    section {
+      svg {
+        margin-right: 1rem;
+      }
+    }
+    div {
+      padding: 1rem 1rem;
+      font-size: 3.2rem;
+      line-height: 5.4rem;
+
+      .college {
+        color: rgb(51 51 51);
+      }
+    }
     #brandLogo {
       padding: 1.375rem 0 1.375rem 3rem;
     }
@@ -734,3 +859,7 @@ body {
     }
   }
 }
+
+
+
+
